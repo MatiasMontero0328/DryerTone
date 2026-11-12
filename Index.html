@@ -5,16 +5,18 @@
         <link rel="icon" href="/Imagenes/icono_32x32.png" type="image/png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/JS/app.js" defer></script>
     </head>
     <body>
         <!--Encabezado de la página-->
-        <header>
-            <img src="/Imagenes/DryerTone.png" alt="Logo de DryerTone" width="100" height="100"> <!--Logo de la página-->
-            
-            <div class="nombrePag">
+        <header class="encabezado">
+             <img src="/Imagenes/DryerTone.png" alt="Logo de DryerTone" width="100" height="100"> <!--Logo de la página-->
+             
+             <div class="nombrePag">
                 <h1><span class="Dryer">Dryer</span><span class="Tone">Tone</span></h1> <!--Nombre de la página-->
-            </div>
+             </div>
+           
 
             <form class="Busqueda">
                 <span>🔍</span>
@@ -23,14 +25,10 @@
 
             <div class="navegacionEncabezado">
                 <ul>
-                    <li><a href="#">🏠 Inicio</a></li>
-                    <li><a href="#">🧭 Explorar</a></li>
-                    <li><a href="#">🔔 Notificaciones</a></li>
-                    <li>
-                        <a href="#">Perfil
-                            <img src="/Imagenes/Link.webp" alt="foto de perfil" width="50" height="50">
-                        </a>
-                    </li>
+                    <li><a href="#"><span class="emoji">🏠</span> Inicio</a></li>
+                    <li><a href="#"><span class="emoji">🧭</span> Explorar</a></li>
+                    <li><a href="#"><span class="emoji">🔔</span> Notificaciones</a></li>
+                    <li><a href="#Perfil"><span class="emoji">👤</span> Perfil</a></li>
                 </ul>
             </div>
         </header>
@@ -40,7 +38,7 @@
             <!--Barra lateral-->
             <nav class="Menu lateral">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#Inicio">Inicio</a></li>
                     <li><a href="#publicaciones">Publicaciones</a></li>
                     <li><a href="#CrearPub">Crear publicacion</a></li>
                     <li><a href="#Perfil">Perfil</a></li>
@@ -67,8 +65,10 @@
             
             <!--Zona central-->
             <section class="Publicaciones">
-                <h2>Tu opinión también tiene vibra 🎶</h2>
-                <p>En <span class="Dryer">Dryer</span><span class="Tone">Tone</span> hablamos de música.Comparte tus ideas, descubre nuevos artistas y encuentra personas con tus mismos gustos musicales</p>
+                <div class="Eslogan" id="Inicio">
+                    <h2>Tu opinión también tiene vibra 🎶</h2>
+                    <p>En <span class="Dryer">Dryer</span><span class="Tone">Tone</span> hablamos de música. Comparte tus ideas, descubre nuevos artistas y encuentra personas con tus mismos gustos musicales</p>
+                </div>
                 
                 <!--Publicacion 1-->
                 <article class="publicacion">
@@ -98,10 +98,10 @@
                     
                     <!--Contenedor de las interacciones-->
                     <footer class="Interacciones">
-                        <button type="button">❤️ Me gusta</button>
-                        <button type="button">💬 Comentar</button>
-                        <button type="button">↗️ Compartir</button>
-                        <button type="button">🔖 Guardar</button>
+                        <button type="button">❤️ Me gusta <span class="contador">0</span></button>
+                        <button type="button">💬 Comentar <span class="contador">0</span></button>
+                        <button type="button">↗️ Compartir <span class="contador">0</span></button>
+                        <button type="button">🔖 Guardar <span class="contador">0</span></button>
                     </footer>
 
                 </article>
@@ -131,10 +131,10 @@
                     
                     <!--Contenedor de las interacciones-->
                     <footer class="Interacciones">
-                        <button type="button">❤️ Me gusta</button>
-                        <button type="button">💬 Comentar</button>
-                        <button type="button">↗️ Compartir</button>
-                        <button type="button">🔖 Guardar</button>
+                        <button type="button">❤️ Me gusta <span class="contador">0</span></button>
+                        <button type="button">💬 Comentar <span class="contador">0</span></button>
+                        <button type="button">↗️ Compartir <span class="contador">0</span></button>
+                        <button type="button">🔖 Guardar <span class="contador">0</span></button>
                     </footer>
 
                 </article>
@@ -164,10 +164,10 @@
                     
                     <!--Contenedor de las interacciones-->
                     <footer class="Interacciones">
-                        <button type="button">❤️ Me gusta</button>
-                        <button type="button">💬 Comentar</button>
-                        <button type="button">↗️ Compartir</button>
-                        <button type="button">🔖 Guardar</button>
+                        <button type="button">❤️ Me gusta <span class="contador">0</span></button>
+                        <button type="button">💬 Comentar <span class="contador">0</span></button>
+                        <button type="button">↗️ Compartir <span class="contador">0</span></button>
+                        <button type="button">🔖 Guardar <span class="contador">0</span></button>
                     </footer>
 
                 </article>
@@ -177,20 +177,20 @@
                     <h2 id="CrearPub">Crear Publicación</h2>
                     <form method="post">
                         <label for="Nombre">Nombre: </label>
-                        <input id="Nombre" type="text" required placeholder="Ingresa tu nombre" name="nombre">
+                        <input id="Nombre" type="text" required placeholder="Ingresa tu nombre" name="Nombre">
 
                         <label for="Contenido">Danos tu opinión</label>
-                        <textarea id="Contenido" placeholder="¿Qué información deseas compartir?" cols="32%" required ></textarea>
+                        <textarea id="Contenido" placeholder="¿Qué información deseas compartir?" required name="Contenido"></textarea>
 
                         <label for="categoria">Categoría</label>
                         <select id="categoria" name="generos" required>
-                            <option value="genero">Rock</option>
-                            <option value="genero" selected>Pop</option>
-                            <option value="genero">Syth-Pop/Synth Wave</option>
-                            <option value="genero">Rap</option>
-                            <option value="genero" disabled>Indie</option>
-                            <option value="genero">Lo-Fi (Low-fidelity)</option>
-                            <option value="genero">R&B</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Pop" selected>Pop</option>
+                            <option value="Synth">Synth-Pop/Synth Wave</option>
+                            <option value="Rap">Rap</option>
+                            <option value="Indie" disabled>Indie</option>
+                            <option value="Lo-Fi">Lo-Fi (Low-fidelity)</option>
+                            <option value="R&B">R&B</option>
                         </select>
                         
                         <button type="submit">Enviar publicación</button>
@@ -205,7 +205,7 @@
                 <h2>Mi perfil</h2>
 
                 <div class="Usuario">
-                    <p><strong>Nombre del usuario:</strong>Matt</p>
+                    <p><strong>Nombre del usuario: </strong>Matt</p>
                     <img src="/Imagenes/Link.webp" width="300px" height="300px" alt="foto del perfil">
                 </div>
 
@@ -249,10 +249,10 @@
                         </section>
 
                         <footer>
-                            <button type="button">❤️ Me gusta</button>
-                            <button type="button">💬 Comentar</button>
-                            <button type="button">↗️ Compartir</button>
-                            <button type="button">🔖 Guardar</button>
+                            <button type="button">❤️ Me gusta <span class="contador">0</span></button>
+                            <button type="button">💬 Comentar <span class="contador">0</span></button>
+                            <button type="button">↗️ Compartir <span class="contador">0</span></button>
+                            <button type="button">🔖 Guardar <span class="contador">0</span></button>
                         </footer>
                         
                     </article>
@@ -277,10 +277,10 @@
                         </section>
 
                         <footer>
-                            <button type="button">❤️ Me gusta</button>
-                            <button type="button">💬 Comentar</button>
-                            <button type="button">↗️ Compartir</button>
-                            <button type="button">🔖 Guardar</button>
+                            <button type="button">❤️ Me gusta <span class="contador">0</span></button>
+                            <button type="button">💬 Comentar <span class="contador">0</span></button>
+                            <button type="button">↗️ Compartir <span class="contador">0</span></button>
+                            <button type="button">🔖 Guardar <span class="contador">0</span></button>
                         </footer>
                         
                     </article>
@@ -302,13 +302,13 @@
         <!--Barra lateral derecha (SOLO INFORMACIÓN)-->
         <aside class="bar-Der">
             <div class="tendencias">
-                <h2>Tendencias en <span class="Dryer"</span><span class="Tone">Tone</span></h2>
+                <h2>Tendencias en <span class="Dryer">Dryer</span><span class="Tone">Tone</span></h2>
                 
                 <ol>
                     <li>Bruno Mars 128.6 M<span class="up"> +2.4%</span>↗️</li>
-                    <li>Rihanna 116.9 M<span class="down" red;"> -0.5%</span>↘️</li>
+                    <li>Rihanna 116.9 M<span class="down"> -0.5%</span>↘️</li>
                     <li>The Weeknd 116.7 M<span class="up"> +1.8%</span>↗️</li>
-                    <li>Justin Bieber 111.6 M<span class="down" red;"> -3.1%</span>↘️</li>
+                    <li>Justin Bieber 111.6 M<span class="down"> -3.1%</span>↘️</li>
                     <li>Taylor Swift 105.6 M<span class="up"> +0.9%</span>↗️</li>
                 </ol>
 
@@ -350,7 +350,7 @@
             <div class="Fondo">
                 <span class="gris">La música nos une</span>
             </div>
-        
+
         </footer>
 
     </body>
