@@ -14,7 +14,6 @@ body {
         "header header header"
         "izq main der"
         "footer footer footer";
-
     height: 100vh;
     overflow: hidden;
     background: #050509;
@@ -22,8 +21,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.Dryer { color: white; }
-.Tone { color: #753cff; }
+body .modo-claro{
+    color: #1f2937;
+}
+
+
+.Dryer { 
+    color: white; 
+}
+.Tone { 
+    color: #753cff; 
+}
 
 
 /* ===== HEADER ===== */
@@ -127,6 +135,8 @@ body.modo-claro .UsuarioPub {
     box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
     border-color: #38bdf8;
 }
+
+
 
 .Busqueda {
     position: absolute;
@@ -521,6 +531,120 @@ body.modo-claro .UsuarioPub {
 .gris { 
     color: #aeb5c8; font-size: 13px; 
 }
+
+/* ===== CORRECCIONES DE TEXTO PARA EL MODO CLARO ===== */
+
+/* Textos de navegación */
+body.modo-claro .navegacionEncabezado a,
+body.modo-claro .Menu.lateral li a,
+body.modo-claro .generos li {
+    color: #475569;
+}
+
+/* Descripción del eslogan */
+body.modo-claro .Eslogan p {
+    color: #334155;
+}
+
+/* Información de usuarios y publicaciones */
+body.modo-claro .Usuario p,
+body.modo-claro .tema-info {
+    color: #64748b;
+}
+
+/* Botones de interacciones */
+body.modo-claro .Interacciones button,
+body.modo-claro .UsuarioPub footer button {
+    color: #334155;
+}
+
+body.modo-claro .Interacciones button:hover,
+body.modo-claro .UsuarioPub footer button:hover {
+    background: #e0e7ff;
+}
+
+/* Textos de la sección Acerca de */
+body.modo-claro .Acerca-de p {
+    color: #334155;
+}
+
+body.modo-claro .Acerca-de a {
+    color: #6d28d9;
+}
+
+/* Formularios */
+body.modo-claro .Publicar input,
+body.modo-claro .Publicar textarea,
+body.modo-claro .Publicar select {
+    color: #1f2937;
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Texto secundario del footer */
+body.modo-claro .gris {
+    color: #64748b;
+}
+
+/* Estadísticas del perfil */
+body.modo-claro .Stats {
+    color: #1f2937;
+    background: #f1f5f9;
+}
+
+/* Publicaciones del perfil */
+body.modo-claro .UsuarioPub {
+    color: #1f2937;
+    background: #ffffff;
+}
+
+/* Elementos activos del menú */
+body.modo-claro .Menu.lateral li a.active {
+    color: white;
+}
+
+/* ===== BUSCADOR EN MODO CLARO ===== */
+
+body.modo-claro .Busqueda {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 3px 15px rgba(117, 60, 255, 0.15);
+}
+
+body.modo-claro .Busqueda input {
+    color: #1f2937;
+}
+
+body.modo-claro .Busqueda input::placeholder {
+    color: #94a3b8;
+}
+
+/* ===== SCROLL EN MODO CLARO ===== */
+
+body.modo-claro #publicaciones {
+    scrollbar-color: rgba(56, 189, 248, 0.35) #ffffff;
+}
+
+body.modo-claro #publicaciones::-webkit-scrollbar {
+    background: #ffffff;
+}
+
+body.modo-claro #publicaciones::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.35);
+    border-radius: 10px;
+}
+
+body.modo-claro .BarraIzq,
+body.modo-claro .bar-Der {
+    scrollbar-color: rgba(56, 189, 248, 0.35) #ffffff;
+}
+
+body.modo-claro .BarraIzq::-webkit-scrollbar-thumb,
+body.modo-claro .bar-Der::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.35);
+    border-radius: 10px;
+}
+
 
 /* Pantallas medianas: tablets y laptops pequeñas */
 @media (max-width: 1100px) {
