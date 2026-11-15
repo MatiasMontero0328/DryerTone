@@ -46,8 +46,87 @@ body {
     object-fit: contain;
 }
 
-.nombrePag { margin-right: auto; }
-.nombrePag h1 { font-size: 30px; }
+.nombrePag { 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: auto;
+}
+.nombrePag h1 { 
+    font-size: 30px; 
+}
+
+/*Diseño del botón para cambiar de tema*/
+.botonTema {
+    background: #111827;
+    border: 1px solid #29364e;
+    color: white;
+    width: 34px;       /* Le damos un tamaño cuadrado fijo */
+    height: 34px;
+    border-radius: 50%; /* Opcional: queda muy bien redondo como el logo */
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;     /* Centra el emoji exactamente en el medio del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-2px); /* Ajuste fino para empatar con el centro óptico */
+    transition: background 0.2s, transform 0.1s;
+}
+
+.botonTema:hover {
+    background: #252044;
+    transform: scale(1.05);
+}
+
+body.modo-claro {
+    background: #f4f5f7;
+    color: #1f2937;
+}
+
+body.modo-claro .encabezado,
+body.modo-claro .BarraIzq,
+body.modo-claro .bar-Der,
+body.modo-claro .Eslogan,
+body.modo-claro .publicacion,
+body.modo-claro .Publicar,
+body.modo-claro #Perfil,
+body.modo-claro #Acerca,
+body.modo-claro .tendencias,
+body.modo-claro .Temas,
+body.modo-claro .final,
+body.modo-claro .Stats,
+body.modo-claro .UsuarioPub {
+    background: #ffffff;
+    color: #1f2937;
+    border-color: #d1d5db;
+}
+
+body.modo-claro .Dryer { 
+    color: #111827; 
+}
+
+body.modo-claro .botonTema {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+body.modo-claro .botonTema:hover {
+    background: #d1d5db;
+}
+
+body.modo-claro .Eslogan, 
+body.modo-claro .publicacion, 
+body.modo-claro .Publicar,
+body.modo-claro #Perfil, 
+body.modo-claro #Acerca, 
+body.modo-claro .tendencias, 
+body.modo-claro .Temas, 
+body.modo-claro .UsuarioPub {
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+    border-color: #38bdf8;
+}
 
 .Busqueda {
     position: absolute;
@@ -92,9 +171,13 @@ body {
     font-size: 13px;
 }
 
-.emoji { font-size: 23px; }
+.emoji { 
+    font-size: 23px; 
+}
 
-.navegacionEncabezado a:hover { color: #9868ff; }
+.navegacionEncabezado a:hover { 
+    color: #9868ff; 
+}
 
 
 /* ===== BARRAS LATERALES ===== */
@@ -136,7 +219,12 @@ body {
     border-radius: 9px;
 }
 
-.Menu.lateral li:first-child a {
+.Menu.lateral li a.active {
+    background: linear-gradient(100deg, #6226ef, #25205b);
+    color: white;
+}
+
+.Menu.lateral li a.active {
     background: linear-gradient(100deg, #6226ef, #25205b);
     color: white;
 }
@@ -178,7 +266,7 @@ body {
     scrollbar-gutter: stable;
     scrollbar-width: thin;
     scrollbar-color: #7041d8 #101018;
-
+    scroll-behavior: smooth;
 }
 
 #publicaciones::-webkit-scrollbar { width: 8px; }
@@ -209,6 +297,10 @@ body {
 
 .Eslogan {
     background: linear-gradient(120deg, #11112b, #171044);
+    background-image: url('/Imagenes/Imagen-Eslogan.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Eslogan h2 {
@@ -219,6 +311,7 @@ body {
 .Eslogan p {
     color: #d0d2e5;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .encabezadoPubli, .UsuarioPub > header {
@@ -292,7 +385,6 @@ body {
 }
 
 .Publicar input, .Publicar textarea, .Publicar select {
-    padding-top: 5px;
     width: 100%;
     padding: 11px;
     color: white;
