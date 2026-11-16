@@ -16,6 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+//Función para que cuando el usuario toque el enlace de explorar lo redirija a la barra de navegación
+// Llevar al buscador al tocar Explorar
+const enlaceExplorar = document.getElementById("enlace-explorar");
+const buscador = document.getElementById("buscador");
+
+enlaceExplorar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    buscador.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    buscador.focus();
+});
+
+
 /* ==========================================================================
    1. VARIABLES Y ESTADO INICIAL
    ========================================================================== */
