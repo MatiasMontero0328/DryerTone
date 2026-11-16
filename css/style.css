@@ -510,8 +510,8 @@ body.modo-claro .UsuarioPub {
     grid-area: footer;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 5px 25px;
+    gap: 15px;
+    padding: 10px 25px;
     background: #080810;
     border-top: 1px solid #252535;
 }
@@ -520,17 +520,46 @@ body.modo-claro .UsuarioPub {
     width: 45px;
     height: 45px;
     object-fit: contain;
+    display: block;
 }
 
-.final h2 { 
-    font-size: 20px; 
+.final h2 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
 }
-.Fondo { 
-    margin-left: auto; 
+
+.Volver-Inicio {
+    display: flex;
+    align-items: center;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    top: 2px;            /* ajuste óptico: sube o baja este valor (1px, 2px) hasta que cuadre */
+    transition: 0.3s;
 }
-.gris { 
-    color: #aeb5c8; font-size: 13px; 
+
+.Volver-Inicio:hover {
+    color: #753cff;
+    text-decoration: underline;
 }
+
+.Fondo {
+    margin: 0 0 0 auto;     /* empuja "La música nos une" a la derecha */
+}
+
+.gris {
+    color: #aeb5c8;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1;
+}
+
+
 
 /* ===== CORRECCIONES DE TEXTO PARA EL MODO CLARO ===== */
 
