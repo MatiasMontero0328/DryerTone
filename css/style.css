@@ -385,6 +385,96 @@ body.modo-claro .UsuarioPub {
     background: #252044;
 }
 
+/* ===== BOTÓN ELIMINAR PUBLICACIÓN ===== */
+
+.encabezadoPubli {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+/* Foto de perfil: alineada verticalmente con el bloque nombre + fecha */
+.encabezadoPubli img {
+    display: block;
+    flex-shrink: 0;
+    margin: 0;
+    align-self: center;
+}
+
+.encabezadoPubli .Usuario {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+/* Quita márgenes que desalinean el nombre y la fecha */
+.encabezadoPubli .Usuario > * {
+    margin: 0;
+    line-height: 1.3;
+}
+
+.BotonEliminar {
+    position: absolute;   
+    top: 0;               
+    right: 0;             
+    margin: 0;            
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    background: transparent;
+    border-radius: 10px;
+
+    cursor: pointer;
+    border: 1px solid rgba(255, 69, 69, 0.5);
+    color: #ff4545;
+
+    transition:
+        width 0.35s ease,
+        background 0.3s ease,
+        padding 0.35s ease,
+        gap 0.35s ease;
+}
+
+.TextoEliminar {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        width 0.35s ease;
+}
+
+/* Efecto al pasar el cursor */
+.BotonEliminar:hover {
+    width: 205px;
+    gap: 8px;               /* el espacio aparece solo al expandirse */
+    padding: 0 12px;
+    background: rgba(255, 60, 75, 0.12);
+    color: #ff4545;
+}
+
+.BotonEliminar:hover .TextoEliminar {
+    width: 155px;
+    opacity: 1;
+}
 
 /* ===== FORMULARIO ===== */
 

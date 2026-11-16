@@ -32,7 +32,6 @@ enlaceExplorar.addEventListener("click", (e) => {
     buscador.focus();
 });
 
-
 /* ==========================================================================
    1. VARIABLES Y ESTADO INICIAL
    ========================================================================== */
@@ -120,7 +119,19 @@ function cargarPublicacionesIniciales() {
 /* ==========================================================================
    3. RENDERIZADO DE PUBLICACIONES
    ========================================================================== */
+function obtenerPublicacionesFiltradas() {
+    if (!filtroActual) return publicaciones;
 
+    return publicaciones.filter(pub => {
+        const categoria = normalizarTexto(pub.categoria);
+
+        return (
+            categoria === filtroActual ||
+            filtroActual.includes(categoria) ||
+            categoria.includes(filtroActual)
+        );
+    });
+}
 
 function mostrarPublicaciones(lista = publicaciones) {
     if (!seccionPublicaciones) return;
@@ -146,7 +157,8 @@ function mostrarPublicaciones(lista = publicaciones) {
         const article = document.createElement("article");
 
         article.classList.add("publicacion", "publicacion-dinamica");
-
+        article.dataset.id = pub.id;
+        
         const imagenesHTML = (pub.imagenes || [])
             .map(imagen => `
                 <img
@@ -170,11 +182,16 @@ function mostrarPublicaciones(lista = publicaciones) {
                 <div class="Usuario">
                     <h3>${escaparHTML(pub.usuario)}</h3>
                     <p>
-                        ${escaparHTML(pub.arroba)}
-                        · ${escaparHTML(pub.tiempo)}
-                        · Categoría: ${escaparHTML(pub.categoria)}
+                    ${escaparHTML(pub.arroba)}
+                    · ${escaparHTML(pub.tiempo)}
+                    · Categoría: ${escaparHTML(pub.categoria)}
                     </p>
                 </div>
+
+                <button type="button" class="BotonEliminar" aria-label="Eliminar publicación">
+                    <span class="IconoEliminar">🗑️</span>
+                    <span class="TextoEliminar">Eliminar publicación</span>
+                </button>
             </header>
 
             <section class="ContentPub">
@@ -220,7 +237,26 @@ document.addEventListener("click", function(evento) {
     const boton = evento.target.closest("button");
 
     if (!boton) return;
+    
+    // Eliminar publicación
+    if (boton.classList.contains("BotonEliminar")) {
+        const articulo = boton.closest(".publicacion");
+        const id = Number(articulo.dataset.id);
 
+        if (confirm("¿Estás seguro de que deseas eliminar esta publicación?")) {
+            publicaciones = publicaciones.filter(pub => pub.id !== id);
+            
+            const lista = obtenerPublicacionesFiltradas();
+            mostrarPublicaciones(lista);
+
+            if (lista.length > 0) {
+                alert("¡La publicación se eliminó correctamente!");
+            }
+        }
+
+        return;
+    }
+    
     // Sistema de likes
     if (boton.classList.contains("btn-like")) {
         const id = Number(boton.dataset.id);
@@ -316,22 +352,10 @@ itemsGeneros.forEach(item => {
     item.style.cursor = "pointer";
 
     item.addEventListener("click", function() {
-        const genero = normalizarTexto(item.textContent.trim());
-
-        filtroActual = genero;
-
-        const publicacionesFiltradas = publicaciones.filter(pub => {
-            const categoria = normalizarTexto(pub.categoria);
-
-            return (
-                categoria === genero ||
-                genero.includes(categoria) ||
-                categoria.includes(genero)
-            );
-        });
-
-        mostrarPublicaciones(publicacionesFiltradas);
+        filtroActual = normalizarTexto(item.textContent.trim());
+        mostrarPublicaciones(obtenerPublicacionesFiltradas());
     });
+    
 });
 
 // Volver a mostrar todas las publicaciones desde el menú
