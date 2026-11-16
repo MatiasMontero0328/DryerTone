@@ -1,0 +1,12 @@
+# Archivos basura del sistema operativo (Windows / Mac)
+.DS_Store
+Thumbs.db
+
+# Configuración personal de tu editor (VS Code)
+.vscode/
+
+# Dependencias pesadas (por si llegas a usar Node o librerías)
+node_modules/
+
+# Archivos de contraseñas o variables secretas
+.env
