@@ -1,11 +1,12 @@
 /* ===== CONFIGURACIÓN GENERAL ===== */
-
+/*Se ponen estilos a todos los elementos*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Se ponen estilos al contenedor body*/
 body {
     display: grid;
     grid-template-columns: 235px minmax(0, 1fr) 290px;
@@ -21,11 +22,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/*Se ponen estilos a modo claro del body*/
 body .modo-claro{
     color: #1f2937;
 }
 
-
+/*Se ponen estilos Dryer y Tone del inicio de la página*/
 .Dryer { 
     color: white; 
 }
@@ -64,6 +66,8 @@ body .modo-claro{
     font-size: 30px; 
 }
 
+
+/*==== Diseño del modo claro ====*/
 /*Diseño del botón para cambiar de tema*/
 .botonTema {
     background: #111827;
@@ -71,14 +75,14 @@ body .modo-claro{
     color: white;
     width: 34px;       /* Le damos un tamaño cuadrado fijo */
     height: 34px;
-    border-radius: 50%; /* Opcional: queda muy bien redondo como el logo */
+    border-radius: 50%; 
     cursor: pointer;
     font-size: 16px;
-    line-height: 1;     /* Centra el emoji exactamente en el medio del botón */
+    line-height: 1;     
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-2px); /* Ajuste fino para empatar con el centro óptico */
+    transform: translateY(-2px); 
     transition: background 0.2s, transform 0.1s;
 }
 
@@ -137,7 +141,7 @@ body.modo-claro .UsuarioPub {
 }
 
 
-
+/*==== Diseño de la barra de búsqueda y la navegación en el encabezado ====*/
 .Busqueda {
     position: absolute;
     left: 50%;
@@ -279,7 +283,10 @@ body.modo-claro .UsuarioPub {
     scroll-behavior: smooth;
 }
 
-#publicaciones::-webkit-scrollbar { width: 8px; }
+#publicaciones::-webkit-scrollbar { 
+    width: 8px; 
+
+}
 #publicaciones::-webkit-scrollbar-thumb {
     background: #7041d8;
     border-radius: 10px;
@@ -307,7 +314,7 @@ body.modo-claro .UsuarioPub {
 
 .Eslogan {
     background: linear-gradient(120deg, #11112b, #171044);
-    background-image: url('/Imagenes/Imagen-Eslogan.png');
+    background-image: url('Imagenes/Imagen-Eslogan.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -465,7 +472,7 @@ body.modo-claro .UsuarioPub {
 /* Efecto al pasar el cursor */
 .BotonEliminar:hover {
     width: 205px;
-    gap: 8px;               /* el espacio aparece solo al expandirse */
+    gap: 8px;               
     padding: 0 12px;
     background: rgba(255, 60, 75, 0.12);
     color: #ff4545;
@@ -629,7 +636,7 @@ body.modo-claro .UsuarioPub {
     line-height: 1;
     margin: 0;
     position: relative;
-    top: 2px;            /* ajuste óptico: sube o baja este valor (1px, 2px) hasta que cuadre */
+    top: 2px;            
     transition: 0.3s;
 }
 
@@ -639,7 +646,7 @@ body.modo-claro .UsuarioPub {
 }
 
 .Fondo {
-    margin: 0 0 0 auto;     /* empuja "La música nos une" a la derecha */
+    margin: 0 0 0 auto;     
 }
 
 .gris {
@@ -652,6 +659,13 @@ body.modo-claro .UsuarioPub {
 
 
 /* ===== CORRECCIONES DE TEXTO PARA EL MODO CLARO ===== */
+
+/* Hover del menú lateral y géneros en modo claro */
+body.modo-claro .Menu.lateral li a:hover,
+body.modo-claro .generos li:hover {
+    background: rgba(56, 189, 248, 0.35);
+    color: #1f2937;
+}
 
 /* Textos de navegación */
 body.modo-claro .navegacionEncabezado a,
@@ -722,7 +736,7 @@ body.modo-claro .Menu.lateral li a.active {
     color: white;
 }
 
-/* ===== BUSCADOR EN MODO CLARO ===== */
+/* ===== BARRA DE BÚSQUEDA EN MODO CLARO ===== */
 
 body.modo-claro .Busqueda {
     background: #ffffff;
@@ -763,6 +777,10 @@ body.modo-claro .bar-Der::-webkit-scrollbar-thumb {
     background: rgba(56, 189, 248, 0.35);
     border-radius: 10px;
 }
+
+/*===================================
+            DISEÑO RESPONSIVO
+  ===================================*/
 
 
 /* Pantallas medianas: tablets y laptops pequeñas */
