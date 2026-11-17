@@ -117,7 +117,7 @@ function cargarPublicacionesIniciales() {
 
 
 /* ==========================================================================
-   3. RENDERIZADO DE PUBLICACIONES
+    3. RENDERIZADO DE PUBLICACIONES
    ========================================================================== */
 function obtenerPublicacionesFiltradas() {
     if (!filtroActual) return publicaciones;
@@ -230,7 +230,7 @@ function mostrarPublicaciones(lista = publicaciones) {
 
 
 /* ==========================================================================
-   4. SISTEMA DE LIKES Y BOTONES
+    4. SISTEMA DE LIKES Y BOTONES
    ========================================================================== */
 
 document.addEventListener("click", function(evento) {

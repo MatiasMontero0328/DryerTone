@@ -73,7 +73,7 @@ body .modo-claro{
     background: #111827;
     border: 1px solid #29364e;
     color: white;
-    width: 34px;       /* Le damos un tamaño cuadrado fijo */
+    width: 34px;      
     height: 34px;
     border-radius: 50%; 
     cursor: pointer;
@@ -314,7 +314,7 @@ body.modo-claro .UsuarioPub {
 
 .Eslogan {
     background: linear-gradient(120deg, #11112b, #171044);
-    background-image: url('Imagenes/Imagen-Eslogan.png');
+    background-image: url('/Imagenes/Eslogan.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -431,27 +431,21 @@ body.modo-claro .UsuarioPub {
     top: 0;               
     right: 0;             
     margin: 0;            
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0;
-
     width: 42px;
     height: 42px;
     padding: 0;
     flex-shrink: 0;
-
     overflow: hidden;
     white-space: nowrap;
-
     background: transparent;
     border-radius: 10px;
-
     cursor: pointer;
     border: 1px solid rgba(255, 69, 69, 0.5);
     color: #ff4545;
-
     transition:
         width 0.35s ease,
         background 0.3s ease,
@@ -597,8 +591,12 @@ body.modo-claro .UsuarioPub {
     gap: 5px;
 }
 
-.tema-titulo { font-size: 13px; }
-.tema-info { color: #8494b0; font-size: 11px; }
+.tema-titulo { 
+    font-size: 13px; 
+}
+.tema-info { 
+    color: #8494b0; font-size: 11px; 
+}
 
 
 /* ===== FOOTER ===== */
