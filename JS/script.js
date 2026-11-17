@@ -173,7 +173,7 @@ function mostrarPublicaciones(lista = publicaciones) {
         article.innerHTML = `
             <header class="encabezadoPubli">
                 <img
-                    src="${escaparHTML(pub.avatar || "/Imagenes/perfil1.jpg")}"
+                    src="${escaparHTML(pub.avatar || "Imagenes/perfil1.jpg")}"
                     alt="Foto de perfil"
                     width="50"
                     height="50"
@@ -404,7 +404,7 @@ if (inputContenido) {
 }
 
 /* ==========================================================================
-   9. INICIALIZACIÓN
+   9. INICIALIZACIÓN DE LAS FUNCIONES
    ========================================================================== */
 
 // El script tiene defer, por lo que el HTML ya está cargado.
