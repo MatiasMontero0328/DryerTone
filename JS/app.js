@@ -404,7 +404,7 @@ if (inputContenido) {
 }
 
 /* ==========================================================================
-   9. INICIALIZACIÓN
+   9. INICIALIZACIÓN DE LAS FUNCIONES
    ========================================================================== */
 
 // El script tiene defer, por lo que el HTML ya está cargado.

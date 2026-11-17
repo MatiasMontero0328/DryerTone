@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta charset="UTF-8">
         <title>DryerTone</title>
         <link rel="icon" href="/Imagenes/icono_32x32.png" type="image/png">
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/JS/app.js" defer></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="JS/app.js" defer></script>
     </head>
     <body>
         <!--Encabezado de la página-->
         <header class="encabezado">
-             <img src="/Imagenes/DryerTone.png" alt="Logo de DryerTone" width="100" height="100"> <!--Logo de la página-->
+             <img src="Imagenes/DryerTone.png" alt="Logo de DryerTone" width="100" height="100"> <!--Logo de la página-->
              
              <div class="nombrePag">
                 <h1><span class="Dryer">Dryer</span><span class="Tone">Tone</span></h1> <!--Nombre de la página-->
                 <button type="button" id="cambiar-tema" class="botonTema" title="cambiar tema">🌙</button>
              </div>
            
-
+             <!--Barra de búsqueda-->
             <form class="Busqueda">
                 <span>🔍</span>
                 <input type="search" id="buscador" placeholder="Buscar artistas, canciones, géneros, usuarios...">
             </form>
 
+            <!--Barra de navegación del encabezado-->
             <div class="navegacionEncabezado">
                 <ul>
                     <li><a href="#Inicio"><span class="emoji">🏠</span> Inicio</a></li>
@@ -34,33 +35,31 @@
             </div>
         </header>
 
+        
         <aside class="BarraIzq">
-            
             <!--Barra lateral-->
             <nav class="Menu lateral">
                 <ul>
                     <li><a href="#Inicio">Inicio</a></li>
                     <li><a href="#publicaciones">Publicaciones</a></li>
-                    <li><a href="#CrearPub">Crear publicacion</a></li>
+                    <li><a href="#CrearPub">Crear publicación</a></li>
                     <li><a href="#Perfil">Perfil</a></li>
                     <li><a href="#Acerca">Acerca de</a></li>
                 </ul>
             </nav>
-
+            <!--Contenedor de los géneros-->
             <div class="generos">
                 <ul>
                     <li>Rock</li>
                     <li>Pop</li>
-                    <li>Syth-Pop/Synth Wave</li>
+                    <li>Synth-Pop/Synth Wave</li>
                     <li>Rap</li>
                     <li>Indie</li>
                     <li>Lo-Fi (Low-fidelity) </li>
                     <li>R&B</li>
                 </ul>
             </div>
-        
         </aside>
-        
         
         <main id="publicaciones"> 
             
@@ -77,7 +76,7 @@
                     <!--Encabezado de la publicacion-->
                     <header class="encabezadoPubli">
                     
-                        <img src="/Imagenes/perfil1.jpg" alt="Foto de perfil" width="50" height="50">
+                        <img src="Imagenes/perfil1.jpg" alt="Foto de perfil" width="50" height="50">
                         <div class="Usuario">
                             
                             <h3>danisound_98</h3>
@@ -85,6 +84,7 @@
                             
                         </div>
                                 
+                        <!--Botón para eliminar la publicación-->
                         <button class="BotonEliminar" title="Eliminar Publicación">
                             <span class="EmojiBasura">🗑️</span>
                             <span class="TextoEliminar">Eliminar publicación</span>
@@ -94,10 +94,10 @@
                 
                     <!--Contenido de la publicación-->
                     <section class="ContentPub">
-                        <p>¿Chicos ustedes que piensan sobre este album?, Siendo sincero para mi es el mejor album de todos los tiempos 🎧.</p>
+                        <p>¿Chicos ustedes que piensan sobre este album?, Siendo sincero para mi es el mejor álbum de todos los tiempos 🎧.</p>
                     
                         <a href="https://es.wikipedia.org/wiki/24K_Magic_(%C3%A1lbum)">
-                            <img class="AlbumImage" src="/Imagenes/24k-magic.png" alt="Imagen del album" width="200px" height="200px">
+                            <img class="AlbumImage" src="Imagenes/24k-magic.png" alt="Imagen del album" width=200" height=200">
                         </a>
                     
                     </section>
@@ -118,7 +118,7 @@
                     <!--Encabezado de la publicacion-->
                     <header class="encabezadoPubli">
                     
-                        <img src="/Imagenes/perfil2.jpg" alt="Foto de perfil" width="50" height="50">
+                        <img src="Imagenes/perfil2.jpg" alt="Foto de perfil" width="50" height="50">
                         <div class="Usuario">
                             
                             <h3>Rick&MortyFAN</h3>
@@ -126,6 +126,7 @@
                         
                         </div>
                                 
+                        <!--Botón para eliminar la publicación-->
                         <button class="BotonEliminar" title="Eliminar Publicación">
                             <span class="EmojiBasura">🗑️</span>
                             <span class="TextoEliminar">Eliminar publicación</span>
@@ -137,7 +138,7 @@
                     <section class="ContentPub">
                         <p>¿Chicos ya escucharon el nuevo sencillo de Bruno Mars?, se los juro que me encanta y más por que sale Karol G, por favor escuchen <strong>Dance With Me</strong>.</p>
                     
-                        <img class="AlbumImage" src="/Imagenes/Dance-With-Me.avif" alt="Imagen del album" width="200px" height="200px">
+                        <img class="AlbumImage" src="Imagenes/Dance-With-Me.avif" alt="Imagen del album" width=200" height=200">
                     </section>
                     
                     <!--Contenedor de las interacciones-->
@@ -156,26 +157,26 @@
                     <!--Encabezado de la publicacion-->
                     <header class="encabezadoPubli">
                     
-                        <img src="/Imagenes/perfil3.jpg" alt="Foto de perfil" width="50" height="50">
+                        <img src="Imagenes/perfil3.jpg" alt="Foto de perfil" width="50" height="50">
                         <div class="Usuario">
                             <h3>Clark</h3>
                             <p>@ClarkKent321 · Hace 7 horas · Categoria: R&B</p>
-                            
+                        </div>
+                        
+                        <!--Botón para eliminar la publicación-->
                         <button class="BotonEliminar" title="Eliminar Publicación">
                             <span class="EmojiBasura">🗑️</span>
                             <span class="TextoEliminar">Eliminar publicación</span>
                         </button>
-                        
-                        </div>
-                                
+                    
                     </header>
                 
                     <!--Contenido de la publicación-->
                     <section class="ContentPub">
-                        <p>Chicos necesito su opinión sobre el album de The Weeknd, por que la verdad es que amo <strong>Trilogy</strong>, pero a la vez <strong>After Hours</strong> y también <strong>Hurry Up Tomorrow</strong>, entonces no se que hacer 😭😭, recomiendenme cual de los tres es mejor por favor 🙏. </p>
-                        <img class="AlbumImage" src="/Imagenes/Trilogy.png" alt="Imagen del album" width="200px" height="200px">
-                        <img class="AlbumImage" src="/Imagenes/After-Hours.png" alt="Imagen del album" width="200px" height="200px">
-                        <img class="AlbumImage" src="/Imagenes/HUT.webp" alt="Imagen del album" width="200px" height="200px">
+                        <p>Chicos necesito su opinión sobre el álbum de The Weeknd, por que la verdad es que amo <strong>Trilogy</strong>, pero a la vez <strong>After Hours</strong> y también <strong>Hurry Up Tomorrow</strong>, entonces no se que hacer 😭😭, recomiendenme cual de los tres es mejor por favor 🙏. </p>
+                        <img class="AlbumImage" src="Imagenes/Trilogy.png" alt="Imagen del album" width="200" height=200">
+                        <img class="AlbumImage" src="Imagenes/After-Hours.png" alt="Imagen del album" width=200" height=200">
+                        <img class="AlbumImage" src="Imagenes/HUT.webp" alt="Imagen del album" width=200" height=200">
                     </section>
                     
                     <!--Contenedor de las interacciones-->
@@ -194,24 +195,24 @@
                     <!--Encabezado de la publicacion-->
                     <header class="encabezadoPubli">
                     
-                        <img src="/Imagenes/Perfil4.jpeg" alt="Foto de perfil" width="50" height="50">
+                        <img src="Imagenes/Perfil4.jpeg" alt="Foto de perfil" width="50" height="50">
                         <div class="Usuario">
                             <h3>nic_vza</h3>
                             <p>@AranSamSam · Hace 23 horas · Categoria: Pop</p>
-                            
+                        </div>
+                        
+                        <!--Botón para eliminar la publicación-->
                         <button class="BotonEliminar" title="Eliminar Publicación">
                             <span class="EmojiBasura">🗑️</span>
                             <span class="TextoEliminar">Eliminar publicación</span>
                         </button>
-                        
-                        </div>
-                                
+                    
                     </header>
                 
                     <!--Contenido de la publicación-->
                     <section class="ContentPub">
                         <p>¿Chicos no sé si soy la única pero amo mi cancion? A Ram Sam Sam. </p>
-                        <img src="/Imagenes/Aransam.jpeg" alt="Imagen de la cancion" width="200px" height="200px">
+                        <img src="Imagenes/Aransam.jpeg" alt="Imagen de la cancion" width="200" height="200">
                     </section>
                     
                     <!--Contenedor de las interacciones-->
@@ -256,18 +257,20 @@
             <section id="Perfil">
                 <h2>Mi perfil</h2>
 
+                <!--Nombre del usuario y foto de perfil-->
                 <div class="Usuario">
                     <p><strong>Nombre del usuario: </strong>Matt</p>
-                    <img src="/Imagenes/Link.webp" width="300px" height="300px" alt="foto del perfil">
+                    <img src="Imagenes/Link.webp" width="300" height="300" alt="foto del perfil">
                 </div>
 
+                <!--Estadísticas del usuario-->
                 <div class="Stats">
                     <p><strong>Seguidores: </strong>29 mil<span class="seguidor">👥</span></p>
                     <p><strong>Me gusta: </strong>300<span class="corazon">❤️</span></p>
                     <p><strong>Publicaciones:</strong> 2<span class="public"></span>🖼️</p>
                     <p><strong>Biografía: </strong> Soy sociable me encanta jugar videojuegos y me siento feliz escuchando de buena música</p>
 
-                    <h3 class="Artist">Mis artitas favoritos:</h3>
+                    <h3 class="Artist">Mis artistas favoritos:</h3>
                     <ul>
                         <li>The Weeknd</li>
                         <li>Bruno Mars</li>
@@ -285,7 +288,7 @@
                         
                         <!--Encabezado de la publicacion-->
                         <header>
-                            <img alt="foto de perfil" src="/Imagenes/Link.webp" width="50" height="50">
+                            <img alt="foto de perfil" src="Imagenes/Link.webp" width="50" height="50">
                             <div class="Usuario">
                                 <h3>Matt</h3>
                                 <p>@ElSuperMatt28 · hace 9 días · Categoría: R&B</p>
@@ -297,9 +300,10 @@
                         <section class="ContentPub">
                             <p>Gente me dijeron que escuchara Dawn FM de The Weeknd, ¿Es tan bueno como dicen?.</p>
 
-                            <img src="/Imagenes/Dawn-FM.jpg" alt="Imagen del album" width="200px" height="200px">
+                            <img src="Imagenes/Dawn-FM.jpg" alt="Imagen del album" width="200" height="200">
                         </section>
 
+                        <!--Contenedor de las interacciones-->
                         <footer>
                             <button type="button">❤️ Me gusta <span class="contador">140</span></button>
                             <button type="button">💬 Comentar <span class="contador">0</span></button>
@@ -314,7 +318,7 @@
                         
                         <!--Encabezado de la publicacion-->
                         <header>
-                            <img alt="foto de perfil" src="/Imagenes/Link.webp" width="50" height="50">
+                            <img alt="foto de perfil" src="Imagenes/Link.webp" width="50" height="50">
                             <div class="Usuario">
                                 <h3>Matt</h3>
                                 <p>@ElSuperMatt28 · hace 20 días · Categoría: Synth-Pop</p>
@@ -323,11 +327,12 @@
                          
                         <!--Contenido de la publicación-->
                         <section class="ContentPub">
-                            <p>Gente amo el album de Daft Punk <strong>RAM</strong> (Random Access Memory), se los juro nunca escuché un album tan perfecto como este y además la canción <strong>Get Lucky</strong> es un obra de arte pura sin duda alguna ¡EL MEJOR ALBUM DE DAFT PUNK!.</p>
+                            <p>Gente amo el álbum de Daft Punk <strong>RAM</strong> (Random Access Memory), se los juro nunca escuché un album tan perfecto como este y además la canción <strong>Get Lucky</strong> es un obra de arte pura sin duda alguna ¡EL MEJOR ALBUM DE DAFT PUNK!.</p>
 
-                            <img src="/Imagenes/RAM.webp" alt="Imagen del album" width="200px" height="200px">
+                            <img src="Imagenes/RAM.webp" alt="Imagen del album" width="200" height="200">
                         </section>
 
+                        <!--Contenedor de las interacciones-->
                         <footer>
                             <button type="button">❤️ Me gusta <span class="contador">160</span></button>
                             <button type="button">💬 Comentar <span class="contador">0</span></button>
@@ -366,6 +371,7 @@
 
             </div>
             
+            <!--Temas de conversación-->
             <div class="Temas">
                 <h2>Temas de conversación</h2>
 
@@ -386,7 +392,7 @@
                     </li>
 
                     <li>
-                        <span class="tema-titulo">¿Es buena Creep de RadioHead?</span>
+                        <span class="tema-titulo">¿Es buena Creep de Radiohead?</span>
                         <span class="tema-info">Hace 4 horas · 167 respuestas</span>
                     </li>
                 </ul>
@@ -395,8 +401,9 @@
 
         </aside>
 
+        <!--Pie de página-->
         <footer class="final">
-            <img alt="Logo de DryerTone" src="/Imagenes/DryerTone.png" width="80px" height="80px">
+            <img alt="Logo de DryerTone" src="Imagenes/DryerTone.png" width="80" height="80">
             <h2><span class="Dryer">Dryer</span><span class="Tone">Tone</span></h2>
             <a href="#Inicio" class="Volver-Inicio">Volver al inicio</a>
             <div class="Fondo">
