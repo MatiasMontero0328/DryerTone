@@ -110,7 +110,7 @@ function cargarPublicacionesIniciales() {
             contenido: contenido ? contenido.textContent.trim() : "",
             imagenes: imagenes,
             likes: contador ? Number(contador.textContent) || 0 : 0,
-            avatar: articulo.querySelector(".encabezadoPubli img")?.getAttribute("src") || "/Imagenes/perfil1.jpg"
+            avatar: articulo.querySelector(".encabezadoPubli img")?.getAttribute("src") || "Imagenes/perfil1.jpg"
         });
     });
 }
@@ -317,7 +317,7 @@ if (formulario) {
             contenido: contenido,
             imagenes: [],
             likes: 0,
-            avatar: "/Imagenes/Link.webp"
+            avatar: "Imagenes/Link.webp"
         };
 
         // Agregar la nueva publicación al inicio
