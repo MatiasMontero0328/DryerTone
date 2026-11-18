@@ -314,7 +314,7 @@ body.modo-claro .UsuarioPub {
 
 .Eslogan {
     background: linear-gradient(120deg, #11112b, #171044);
-    background-image: url('/Imagenes/Eslogan.png');
+    background-image: url('../Imagenes/Eslogan.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
